@@ -1,0 +1,18 @@
+[package]
+name = "libm-test"
+version = "0.1.0"
+authors = ["Gonzalo Brito Gadeschi <gonzalobg88@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.7"
+libm = { path = "../libm", default-features = false }
+
+[dev-dependencies]
+libm-analyze = { path = "../libm-analyze", default-features = true }
+
+[features]
+default = []
+checked = ["libm/checked"]
+stable = ["libm/stable"]
+system_libm = []
